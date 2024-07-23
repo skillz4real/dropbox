@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+  
+  {% block content %}
+  <table id="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Hash</th>
+        <th>Link</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for file in files %}
+      <tr> 
+        <td>{{paste.get('title')}}</td>
+        <td>{{paste.get('hash')}}</td>
+        <td><a href="/paste/{{paste.get('id')}}" target="_blank">link</a></td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  {% endblock %}

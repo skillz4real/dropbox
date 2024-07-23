@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title> {% block title %} {% endblock %} </title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+    <script src="{{url_for('static', filename='js/nav.js')}}" defer></script>
+    <script src="{{url_for('static', filename='js/index.js')}}" defer></script>
+  </head>
+  <body>
+    <nav class="flex primary-header">
+      <div class="logo-container flex">
+        <a href="/">
+          <img src="{{url_for('static', filename='assets/banner.png')}}" class="logo">
+        </a>
+      </div>
+      <ul class="primary-nav flex" data-visible="false">
+        <li><a href="/dropbox"><span>Dropbox</span></a></li>
+      </ul>
+    </nav>
+    <!-- can add jinja syntaxe for control flow and add if user logged in then display account info else display login buttons -->
+    {% block content %} {% endblock %}
+  </body>
+</html>

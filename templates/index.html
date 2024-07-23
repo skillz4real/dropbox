@@ -1,0 +1,12 @@
+{% extends "base.html" %} 
+
+  {% block content %}
+
+    <form action="/dropbox" class= "paste grid" method="POST">
+      <label for="file-upload" class="custom-file-upload">
+        Upload a file...
+      </label>
+      <input id="file-upload" type="file" />
+    </form>
+
+  {% endblock %}
